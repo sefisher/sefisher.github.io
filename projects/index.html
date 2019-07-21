@@ -1,0 +1,416 @@
+<html lang="en-us">
+  <head>
+  <meta name="theme" content="Syna">
+  <meta name="theme-version" content="v0.15">
+  <meta name="theme-url" content="https://syna.okkur.org">
+  <meta name="theme-description" content="Highly customizable open source theme for Hugo based static websites">
+  <meta name="theme-author" content="Okkur Labs">
+  <meta name="theme-author-url" content="https://about.okkur.org">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta name="google" value="notranslate">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="description" content="">
+  <meta property="og:title" content="Our Projects &amp;middot; fishyDIY">
+  <meta property="og:url" content="/projects/">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="fishyDIY">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Projects &amp;middot; fishyDIY" />
+  <meta name="twitter:description" content="">
+  <meta name="twitter:url" content="/projects/" />
+        <meta property="og:image" content="">
+        <meta name="twitter:image" content="">
+  <meta name="author" content="fishyDIY">
+
+  <meta name="generator" content="Hugo 0.55.6" />
+
+  <title>Our Projects &middot; fishyDIY</title>
+
+  <!-- Theme Styles -->
+  <link href="/style.min.c5801db8f5f1873eec776c1a8b4f6d85bfe4d01781ecf7d3e9510b95a7b64918.css" rel="stylesheet">
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+      <link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="/favicon.ico">
+      <link rel="icon" href="/favicon.png">
+      <link rel="apple-touch-icon-precomposed" href="/favicon.png">
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <script>
+    window.syna = {
+      enabledUnsafeEvents: true,
+    };
+  </script>
+  <script src="/scripts/syna-head.min.bb34bad09b42b3febef27ef9976fc5d5c34c8f199549c80f2bfb0a6ecc2586e2.js"></script></head>
+<body class="bg-secondary">
+    <!-- Navigation --><nav class="overlay fragment navbar navbar-expand-lg py-2 scroll-spy bg-light navbar-light" id="nav" role="navigation">
+  <div class="container">
+      <a class="navbar-brand py-0" href="/#">
+        <img src="/images/fishyDIYicon.svg" height="35" class="d-inline-block align-top" alt="fishyDIY">
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse justify-content-between collapse show" id="navbarCollapse">
+      <ul class="navbar-nav"><li class="nav-item">
+              <a href="/"
+                  class="nav-link">
+                Home
+              </a>
+            </li><li class="nav-item">
+              <a href="/projects"
+                  class="nav-link active default-active">
+                Projects
+              </a>
+            </li><li class="nav-item">
+              <a href="/stuffwelike"
+                  class="nav-link">
+                Stuff We Like
+              </a>
+            </li><li class="nav-item">
+              <a href="/about"
+                  class="nav-link">
+                About Us
+              </a>
+            </li>
+      </ul>
+        <div class="search-container position-relative">
+          <form action="/search" class="my-0">
+            <div class="input-group my-0">
+              <input type="text" class="form-control py-1" id="search-query-nav" name="s" placeholder="Search...">
+              <div class="input-group-append">
+                <button class="btn btn-primary" title="Search"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+          <div class="search-results-container">
+            <div class="col p-0">
+              <div id="search-results-nav" class="col px-0 results"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+    <div class="d-none d-lg-block pl-auto">
+      <a class="btn btn-light ignore-color-change" href="https://github.com/sefisher" role="button" title="Github">
+        <i class="fab fa-github mr-2"></i>
+        fishyDIY
+      </a>
+    </div>
+</nav>
+
+<div class="scroll-to-top bg-primary has-font-icon"
+  title="Back to top"
+  ><i class="fas fa-angle-up"></i><span class="sr-only">Back to top</span>
+</div>
+
+<script id="search-empty-template-nav" type="text/x-js-template">
+  <p class="p-2">Please enter a word or phrase above</p>
+</script>
+<script id="search-no-results-template-nav" type="text/x-js-template">
+  <p class="p-2">No matches found</p>
+</script>
+<script id="search-result-template-nav" type="text/x-js-template">
+  <a href="${link}" id="summary-${key}" class="result ignore-color-change">
+    <div class="p-2">
+      <h5>${title}</h5>
+      <p class="m-0 text-body">${snippet}</p>
+      ${ isset tags }<p>Tags: ${tags}</p>${ end }
+      ${ isset categories }<p>Categories: ${categories}</p>${ end }
+    </div>
+  </a>
+</script>
+
+<script>
+  var fragmentName = "nav";
+  window.syna.api.register('search', 'search-' + fragmentName, {
+    searchInput: '#search-query-nav',
+    resultsContainer: '#search-results-nav',
+    template: '#search-result-template-nav',
+    noResults: '#search-no-results-template-nav',
+    empty: '#search-empty-template-nav',
+  });
+
+  var resultsContainer = document.querySelector('.search-results-container');
+  document.querySelector('#search-query-nav').addEventListener('input', function(e) {
+    if (e.target.value.length) {
+      resultsContainer.classList.add('show');
+    } else {
+      resultsContainer.classList.remove('show');
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!document.querySelector('.search-container').contains(e.target)) {
+      document.querySelector('#search-query-nav').value = '';
+      resultsContainer.classList.remove('show');
+    }
+  });
+</script>
+
+<!-- Content -->
+<section id="index" class="content-fragment fragment">
+  <div class="overlay container-fluid bg-light">
+    <div class="container py-5">
+      <div class="row">
+          <article class="col-md-12">
+  <div class="row mx-0">
+    <div class="col px-0 text-center text-body">
+      <h2>Our Projects</h2>
+    </div>
+  </div>
+<div class="col-12 content px-0 text-body">The following are recent projects we&rsquo;ve completed.  The tutorials remain a work in progress.  The code for fishyDIYdevices, which is the basis for most of the projects is hosted on Github (link at top right of the site).</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="fishyDevicePortfolio" class="fragment">
+    <div class="container-fluid bg-secondary">
+    <div class="container py-5">
+
+  <div class="row mx-0">
+    <div class="col px-0 text-center text-body">
+      <h2>fishyDIYdevice Projects</h2>
+    </div>
+  </div><div class="row mx-0">
+    <div class="col pt-4 pb-0 px-0 text-center text-body">
+      <h5>Home automation projects based on fishDIYdevice code using ESP8266 chips.</h5>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-9 col-12 py-2">
+          <div
+            class="border rounded position-relative portfolio-item overflow-hidden">
+              <a href="/#"><img src="/images/alexaRotator.jpg" class="img-fluid" alt="">
+                <div class="position-absolute hover-overlay"></div><div class="position-absolute text-light badge-container"><span class="badge badge-dark">
+                        <i class="fas fa-fish"></i>
+                        <span>fishyDevice</span>
+                      </span><span class="badge badge-dark">
+                        <i class="fas fa-sync"></i>
+                        <span>Limit Switch Actuator</span>
+                      </span></div>
+                  <div class="position-absolute description-container col">
+                    <div class="row flex-column justify-content-center description text-light p-2 rounded text-center">
+                      <h5 class="title">Rotating Base for Echo Show</h5>
+                      <h6 class="subtitle">Example implementation for the &#39;Limit Switch Actuator&#39; fishyDIY device type.</h6>
+                    </div>
+                  </div>
+                <div class="content hidden"><p>Motorized rotating platform for 2nd Generation Amazon Echo Show. This tutorial provides the 3D printed parts and assembly instructions. Designed to work with a Node MCU (ESP8266) and a 28BYJ-48 Stepper Motor with a ULN2003 Driver. These electronic parts are widely available for under $10. Only additional parts needed are 6mm balls for the bearing (you can use air-soft pellets or buy metal balls). Uses fishydIY device software avilable on github to allow voice controlled rotation of the Echo Show display to face the direction you want.</p>
+</div>
+              </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-9 col-12 py-2">
+          <div
+            class="border rounded position-relative portfolio-item overflow-hidden">
+              <a href="/#"><img src="/images/linearActuator.jpg" class="img-fluid" alt="">
+                <div class="position-absolute hover-overlay"></div><div class="position-absolute text-light badge-container"><span class="badge badge-dark">
+                        <i class="fas fa-fish"></i>
+                        <span>fishyDevice</span>
+                      </span><span class="badge badge-dark">
+                        <i class="fas fa-sync"></i>
+                        <span>Limit Switch Actuator</span>
+                      </span></div>
+                  <div class="position-absolute description-container col">
+                    <div class="row flex-column justify-content-center description text-light p-2 rounded text-center">
+                      <h5 class="title">Linear Actuator</h5>
+                      <h6 class="subtitle">Example implementation for the &#39;Limit Switch Actuator&#39; fishyDIY device type.</h6>
+                    </div>
+                  </div>
+                <div class="content hidden"><p>A linear actuator configured for a ventilation damper. This project tutorial provides the 3D printed parts and assembly instruction. It is designed to work with a Node MCU (ESP8266) and a 28BYJ-48 Stepper Motor with a ULN2003 Driver. These electronic parts are widely available for under $10. The device uses fishydIYdevice software avilable on github to allow voice controlled, or local, wifi web controlled, operation of whatever you have the linear actuator connected to.</p>
+</div>
+              </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-9 col-12 py-2">
+          <div
+            class="border rounded position-relative portfolio-item overflow-hidden">
+              <a href="/#"><img src="/images/rgbLED.jpg" class="img-fluid" alt="">
+                <div class="position-absolute hover-overlay"></div><div class="position-absolute text-light badge-container"><span class="badge badge-dark">
+                        <i class="fas fa-fish"></i>
+                        <span>fishyDevice</span>
+                      </span><span class="badge badge-dark">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>RGBLED</span>
+                      </span></div>
+                  <div class="position-absolute description-container col">
+                    <div class="row flex-column justify-content-center description text-light p-2 rounded text-center">
+                      <h5 class="title">RGB LED Control</h5>
+                      <h6 class="subtitle">Example implementation for the &#39;RGBLED&#39; fishyDIY device type.</h6>
+                    </div>
+                  </div>
+                <div class="content hidden"><p>An RGBLED strip controller.  This uses some discrete electronics to control the LED and operates using a Node MCU (ESP8266). These electronic parts are widely available for under $10. The device uses fishydIYdevice software avilable on github to allow voice controlled, or local, wifi web controlled, operation of the LEDs.</p>
+</div>
+              </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-9 col-12 py-2">
+          <div
+            class="border rounded position-relative portfolio-item overflow-hidden">
+              <a href="/#"><img src="/images/simpleSwitch.jpg" class="img-fluid" alt="">
+                <div class="position-absolute hover-overlay"></div><div class="position-absolute text-light badge-container"><span class="badge badge-dark">
+                        <i class="fas fa-fish"></i>
+                        <span>fishyDevice</span>
+                      </span><span class="badge badge-dark">
+                        <i class="fas fa-toggle-on"></i>
+                        <span>Simple Switch</span>
+                      </span></div>
+                  <div class="position-absolute description-container col">
+                    <div class="row flex-column justify-content-center description text-light p-2 rounded text-center">
+                      <h5 class="title">Simple Switch</h5>
+                      <h6 class="subtitle">Example implementation for the &#39;Simple Switch&#39; fishyDIY device type.</h6>
+                    </div>
+                  </div>
+                <div class="content hidden"><p>A simple switch device set up to control 4 light switches. This project tutorial provides the 3D printed parts and assembly instruction. It is designed to work with a Node MCU (ESP8266) and <strong>TODO: put in other parts here</strong>. These electronic parts are widely available for under $10. The device uses fishydIYdevice software avilable on github to allow voice controlled, or local, wifi web controlled, operation of lights.</p>
+</div>
+              </a>
+          </div>
+        </div>
+  </div>
+    </div>
+    </div>
+</section>
+
+<!-- Portfolio -->
+<section id="otherPortfolio" class="fragment">
+    <div class="container-fluid bg-dark">
+    <div class="container py-5">
+
+  <div class="row mx-0">
+    <div class="col px-0 text-center text-white">
+      <h2>Other Projects</h2>
+    </div>
+  </div><div class="row mx-0">
+    <div class="col pt-4 pb-0 px-0 text-center text-white">
+      <h5>Other non-fishyDevice Projects</h5>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-9 col-12 py-2">
+          <div
+            class="border rounded position-relative portfolio-item overflow-hidden">
+              <a href="/#"><img src="/images/generic.jpg" class="img-fluid" alt="">
+                <div class="position-absolute hover-overlay"></div>
+                  <div class="position-absolute description-container col">
+                    <div class="row flex-column justify-content-center description text-light p-2 rounded text-center">
+                      <h5 class="title">New Project</h5>
+                      <h6 class="subtitle">Example non fishyDIYdevice project.</h6>
+                    </div>
+                  </div>
+                <div class="content hidden"><p>Example.</p>
+</div>
+              </a>
+          </div>
+        </div>
+  </div>
+    </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<section id="footer" class="fragment">
+    <div class="container-fluid bg-light">
+    <div class="container py-5">
+
+  <div class="row">
+    <div class="col-md m-2 text-body">
+        <h4></h4>
+        <a href="#">
+          <img src="/images/fishyDIYicon.svg" class="img-fluid w-50" alt="Logo Subtext">
+        </a>
+    </div>
+    <div class="col-md m-2 text-body">
+        <h4>Quick Links</h4>
+        <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link p-0 display-5" href="https://github.com/sefisher/fishyDIYdevices">fishyDIYdevices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 display-5" href="https://www.3dhubs.com/guides/3d-printing/">3D Printing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 display-5" href="https://www.tinkercad.com/">Tinkercad</a>
+              </li>
+        </ul>
+    </div>
+    <div class="col-md m-2 text-body">
+        <div><h4 id="welcome-to-fishydiy">Welcome to fishyDIY</h4>
+
+<p>Making Open Source Projects for Everyone</div>
+    </div>
+  </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- Copyright -->
+<footer class="overlay fragment container-fluid bg-light" id="copyright">
+  <div class="container">
+    <div class="row py-3">
+      <div class="col-md">
+        <div class="row mx-0 my-2 justify-content-center text-center text-lg-none text-black-50">
+          <div class="row mx-0 mr-lg-auto justify-content-center">
+              <div class="col-auto px-1">© Copyright&nbsp;2019</div>
+              <div class="col-auto px-0"> by  fishyDIY</div>
+          </div>
+        </div>
+      </div>
+        <div class="col-auto mx-auto">
+          <div class="row mx-0 navbar-text text-center text-black-50">Website based on<a href="https://syna.okkur.org" class="ml-1">Syna</a>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="row mx-0 my-2 justify-content-center">
+            <ul class="nav ml-lg-auto">
+                <li class="nav-item">
+                  <a class="nav-link py-0" href="/about"
+                  >About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-0" href="https://en.wikipedia.org/wiki/MIT_License"
+                  >MIT License</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</footer>
+<div id="react"></div>
+    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header row mx-0">
+              <div class="modal-title col px-0">
+                <h5 class="title text-dark"></h5>
+                <h6 class="subtitle text-secondary"></h6>
+              </div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <img src="" alt="" class="img-fluid">
+            <div class="modal-body p-3">
+              <div class="badge-container"></div>
+              <div class="content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme Code -->
+      <script async defer src="/scripts/syna-main.min.7d08697560d9c911a0194673093ed24e917be39c0c6ea6ffe9bfefd7869f9f34.js"></script>
+      <script async defer src="/scripts/syna-search.min.907fcad5c5d5d1cf17b588f973805d28fec45877fe127410a6992b29634796ce.js"></script>
+      <script async defer src="/scripts/syna-portfolio.min.4c625fa36020dfb927bb08357c77410589faab3ff950db44208e6ea0bf9c46b1.js"></script>
+      <script async defer src="/scripts/syna-portfolio.min.4c625fa36020dfb927bb08357c77410589faab3ff950db44208e6ea0bf9c46b1.js"></script>
+  </body>
+</html>

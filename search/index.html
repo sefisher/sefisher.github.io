@@ -12,23 +12,23 @@
   <meta name="google" value="notranslate">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="description" content="Open Source Projects for Everyone">
-  <meta property="og:title" content="fishyDIY &amp;middot; fishyDIY">
-  <meta property="og:url" content="/">
-  <meta property="og:description" content="Open Source Projects for Everyone">
+  <meta name="description" content="Search fragment using fuzzy search.">
+  <meta property="og:title" content="Search &amp;middot; fishyDIY">
+  <meta property="og:url" content="/search/">
+  <meta property="og:description" content="Search fragment using fuzzy search.">
   <meta property="og:site_name" content="fishyDIY">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="fishyDIY &amp;middot; fishyDIY" />
-  <meta name="twitter:description" content="Open Source Projects for Everyone">
-  <meta name="twitter:url" content="/" />
-    <meta property="og:image" content="">
-    <meta name="twitter:image" content="">
+  <meta name="twitter:title" content="Search &amp;middot; fishyDIY" />
+  <meta name="twitter:description" content="Search fragment using fuzzy search.">
+  <meta name="twitter:url" content="/search/" />
+        <meta property="og:image" content="">
+        <meta name="twitter:image" content="">
   <meta name="author" content="fishyDIY">
 
   <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>fishyDIY &middot; fishyDIY</title>
+  <title>Search &middot; fishyDIY</title>
 
   <!-- Theme Styles -->
   <link href="/style.min.c5801db8f5f1873eec776c1a8b4f6d85bfe4d01781ecf7d3e9510b95a7b64918.css" rel="stylesheet">
@@ -56,7 +56,7 @@
     <div class="navbar-collapse justify-content-between collapse show" id="navbarCollapse">
       <ul class="navbar-nav"><li class="nav-item">
               <a href="/"
-                  class="nav-link active default-active">
+                  class="nav-link">
                 Home
               </a>
             </li><li class="nav-item">
@@ -150,38 +150,137 @@
   });
 </script>
 
-<!-- Hero -->
-<header id="hero" class="fragment hero">
-    <div
-      style="background-image:url(/images/header.jpg)"
-      class="jumbotron text-center header-image mb-0 bg-light">
-    <div id="hero-particles-js" class="particles-js"></div>
-      <div class="row justify-content-center align-items-start">
-        <img
-          class="overlay img-fluid"
-          src="/images/logo.svg"
-          alt="fishyDIY"width="500px"></img>
-      </div>
-      <div class="row justify-content-center align-items-start">
-        <h1 class="overlay jumbotron-heading my-4 text-body">Open Source projects for everyone.</h1>
-      </div>
-    <a class="overlay btn btn-lg m-2 btn-info " href="/projects">
-      <div class="column justify-content-center align-content-center">Projects</div>
-    </a>
-    <a class="overlay btn btn-lg m-2 btn-primary " href="/stuffwelike">
-      <div class="column justify-content-center align-content-center">Stuff We Like</div>
-    </a>
-    <a class="overlay btn btn-lg m-2 btn-success " href="https://github.com/sefisher/fishyDIYdevices">
-      <div class="column justify-content-center align-content-center">Git fishyDIY</div>
-    </a>
+<!-- Content -->
+<section id="index" class="content-fragment fragment">
+  <div class="overlay container-fluid bg-light">
+    <div class="container py-5">
+      <div class="row">
+          <article class="col-md-12">
+  <div class="row mx-0">
+    <div class="col px-0 text-center text-body">
+      <h2>Search</h2>
+    </div>
   </div>
-</header>
+<div class="col-12 content px-0 text-body">Search fragment using fuzzy search.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Search -->
+<section id="search" class="fragment">
+    <div class="container-fluid bg-secondary">
+    <div class="container py-5">
+
+  <div class="row mx-0">
+    <div class="col px-0 text-center text-body">
+      <h2>Search Fragment</h2>
+    </div>
+  </div><div class="row mx-0">
+    <div class="col pt-4 pb-0 px-0 text-center text-body">
+      <h5>Searches through all content fragments</h5>
+    </div>
+  </div>
+
+  <div class="row w-100 justify-content-center mx-0">
+    <form action="/search" class="mt-0">
+      <div class="input-group my-0">
+        <input type="text" class="form-control py-1" id="search-query-search" name="s" placeholder="Search...">
+        <div class="input-group-append">
+          <button class="btn btn-primary" title="Search"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="search-results-full-container row">
+    <div class="col px-0">
+      <div id="search-results-search" class="col px-0 text-body"></div>
+    </div>
+  </div>
+    </div>
+    </div>
+</section>
+
+<script id="search-empty-template-search" type="text/x-js-template">
+  <p class="text-center mt-4">Please enter a word or phrase above</p>
+</script>
+<script id="search-no-results-template-search" type="text/x-js-template">
+  <p class="text-center mt-4">No matches found</p>
+</script>
+<script id="search-result-template-search" type="text/x-js-template">
+  <a href="${link}" id="summary-${key}" class="result ignore-color-change">
+    <div class="p-2">
+      <h5>${title}</h5>
+      <p class="m-0 text-body">${snippet}</p>
+      ${ isset tags }<p>Tags: ${tags}</p>${ end }
+      ${ isset categories }<p>Categories: ${categories}</p>${ end }
+    </div>
+  </a>
+</script>
+
 <script>
-  var fragmentName = "hero";window.syna.api.register("hero", "hero-" + fragmentName, {
-    selector: "hero-particles-js",
-    config: null,
+  var fragmentName = "search";
+  window.syna.api.register('search', 'search-' + fragmentName, {
+    searchInput: '#search-query-search',
+    resultsContainer: '#search-results-search',
+    template: '#search-result-template-search',
+    noResults: '#search-no-results-template-search',
+    empty: '#search-empty-template-search',
   });
 </script>
+
+
+<!-- Content -->
+<section id="code-search" class="content-fragment fragment">
+  <div class="overlay container-fluid bg-light">
+    <div class="container py-5">
+      <div class="row">
+          <article class="col-md-12">
+<div class="col-12 content px-0 text-body"><p><details><summary>Code</summary></p>
+
+<pre><code class="language-+++">fragment = &quot;search&quot;
+weight = 110
+background = &quot;secondary&quot;
+
+title = &quot;Search Fragment&quot;
+subtitle = &quot;Searches through all content fragments&quot;
+#title_align = &quot;left&quot; # Default is center, can be left, right or center
++++
+</code></pre>
+
+<p></details></p>
+</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Content -->
+<section id="docs" class="content-fragment fragment">
+  <div class="overlay container-fluid bg-light">
+    <div class="container py-5">
+      <div class="row"><div class="content-sidebar col-md-3 pb-4 px-md-0 order-0">
+              <div class="sticky-top pt-3"><div class="col-12 px-0 text-left text-body">
+            </div>
+              </div> </div>
+          <article class="col-md-9">
+  <div class="row mx-0">
+    <div class="col px-0 text-center text-body">
+      <h2>Documentation</h2>
+    </div>
+  </div>
+<div class="col-12 content px-0 text-body"><p>No variable is needed for this fragment, except for global variables.</p>
+
+<p><a href="/docs/global-variables">Global variables</a> are documented as well and have been omitted from this page.</p>
+</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <section id="footer" class="fragment">
@@ -279,6 +378,6 @@
     <!-- Theme Code -->
       <script async defer src="/scripts/syna-main.min.7d08697560d9c911a0194673093ed24e917be39c0c6ea6ffe9bfefd7869f9f34.js"></script>
       <script async defer src="/scripts/syna-search.min.907fcad5c5d5d1cf17b588f973805d28fec45877fe127410a6992b29634796ce.js"></script>
-      <script async defer src="/scripts/syna-hero.min.4c86bbf85a8655c22c5046df9f983a1f0a0f771915f9f447a6872a863a6714ef.js"></script>
+      <script async defer src="/scripts/syna-search.min.907fcad5c5d5d1cf17b588f973805d28fec45877fe127410a6992b29634796ce.js"></script>
   </body>
 </html>
