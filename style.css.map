@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.css",
-	"sourceRoot": "c:/Hugo/Sites/fishydiy.com",
+	"sourceRoot": "C:/Hugo/Sites/fishydiy.com",
 	"sources": [
 		"themes/syna/assets/styles/index.scss",
 		"themes/syna/assets/styles/fontawesome/fontawesome.scss",
